@@ -21,17 +21,15 @@ tools:context=".MainActivity">
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent" />
 
-<!-- Кнопка настроек -->
-<ImageButton
-    android:id="@+id/buttonSettings"
-    android:layout_width="40dp"
-    android:layout_height="wrap_content"
-    android:background="?android:attr/selectableItemBackground"
-    android:contentDescription="@string/settings"
-    android:src="@android:drawable/ic_menu_preferences"
-    app:layout_constraintBottom_toTopOf="@+id/sideControls"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toTopOf="@id/title" />
+<!--&lt;!&ndash; Кнопка настроек &ndash;&gt;-->
+<!--    <ImageButton-->
+<!--        android:id="@+id/buttonSettings"-->
+<!--        android:layout_width="40dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="?android:attr/selectableItemBackground"-->
+<!--        android:contentDescription="@string/settings"-->
+<!--        android:src="@android:drawable/ic_menu_preferences"-->
+<!--        app:layout_constraintEnd_toEndOf="parent" />-->
 
 <!-- Таблица -->
 <mr.demonid.workcalendar.views.WorkCalendarView
