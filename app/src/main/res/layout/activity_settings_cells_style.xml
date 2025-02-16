@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsCellStyleActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_style_save">
+
+        <LinearLayout
+            android:id="@+id/styleContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <RadioGroup
+                android:id="@+id/styleRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Режим 1 -->
+                <LinearLayout
+                    android:id="@+id/styleOption1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <!--                    android:background="?attr/selectableItemBackgroundBorderless"-->
+
+                    <RadioButton
+                        android:id="@+id/styleRadioButton1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Эстетичный"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                    <mr.demonid.workcalendar.views.StylePreviewCell
+                        android:id="@+id/stylePreview1"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"/>
+                </LinearLayout>
+
+                <!-- Режим 2 -->
+                <LinearLayout
+                    android:id="@+id/styleOption2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <RadioButton
+                        android:id="@+id/styleRadioButton2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:text="Готический"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                    <mr.demonid.workcalendar.views.StylePreviewCell
+                        android:id="@+id/stylePreview2"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"/>
+                </LinearLayout>
+
+                <!-- Режим 3 -->
+                <LinearLayout
+                    android:id="@+id/styleOption3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <RadioButton
+                        android:id="@+id/styleRadioButton3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:text="Олдскульный"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                    <mr.demonid.workcalendar.views.StylePreviewCell
+                        android:id="@+id/stylePreview3"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"/>
+                </LinearLayout>
+
+            </RadioGroup>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Кнопки сохранения и отмены -->
+    <Button
+        android:id="@+id/btn_style_save"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="Сохранить"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_style_cancel"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_style_cancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Отменить"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_style_save" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

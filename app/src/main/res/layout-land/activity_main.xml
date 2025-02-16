@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".MainActivity">
+
+<!-- Заголовок -->
+<TextView
+    android:id="@+id/title"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:text="Заголовок"
+    android:textSize="24sp"
+    android:textStyle="bold"
+    app:layout_constraintBottom_toTopOf="@+id/customTableView"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<!-- Кнопка настроек -->
+<ImageButton
+    android:id="@+id/buttonSettings"
+    android:layout_width="40dp"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:contentDescription="@string/settings"
+    android:src="@android:drawable/ic_menu_preferences"
+    app:layout_constraintBottom_toTopOf="@+id/sideControls"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="@id/title" />
+
+<!-- Таблица -->
+<mr.demonid.workcalendar.views.WorkCalendarView
+    android:id="@+id/customTableView"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_marginEnd="8dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/sideControls"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/title" />
+
+<!-- Guideline для ограничения ширины -->
+<androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideline"
+    android:layout_width="wrap_content"
+    android:layout_height="0dp"
+    app:layout_constraintGuide_percent="0.10" /> <!-- 30% от ширины экрана -->
+
+<!--     Боковая панель с радиокнопками и кнопками -->
+<LinearLayout
+    android:id="@+id/sideControls"
+    android:layout_width="wrap_content"
+    android:layout_height="0dp"
+    android:orientation="vertical"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/customTableView"
+    android:weightSum="3">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerThemes"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:padding="8dp"
+        android:overScrollMode="never"/>
+
+    <!-- Кнопки -->
+    <Button
+        android:id="@+id/buttonPrev"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:text="Prev" />
+
+    <Button
+        android:id="@+id/buttonNext"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:text="Next" />
+</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

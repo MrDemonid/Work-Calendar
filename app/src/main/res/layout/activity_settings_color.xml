@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsCellColorActivity">
+
+    <!-- Прокручиваемый контент -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_color_save">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Блок "Режим 1" -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/colorSettingCardView1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Заголовок календаря"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <mr.demonid.workcalendar.views.TitlePreviewCell
+                        android:id="@+id/colorPreview1"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Блок "Режим 2" -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/colorSettingCardView2"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Названия дней недели"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <mr.demonid.workcalendar.views.StylePreviewCell
+                        android:id="@+id/colorPreview2"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Блок "Режим 3" -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/colorSettingCardView3"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ячейки календаря"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <mr.demonid.workcalendar.views.StylePreviewCell
+                        android:id="@+id/colorPreview3"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Блок "Режим 4" -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/colorSettingCardView4"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Начало суточной смены"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <mr.demonid.workcalendar.views.StylePreviewCell
+                        android:id="@+id/colorPreview4"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Блок "Режим 5" -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/colorSettingCardView5"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Основная строка -->
+                    <LinearLayout
+                        android:id="@+id/colorSettingLinear5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Конец суточной смены"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <mr.demonid.workcalendar.views.StylePreviewCell
+                            android:id="@+id/colorPreview5"
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"/>
+                    </LinearLayout>
+
+                    <!-- Флажок-переключатель -->
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switch_enable_night"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Показывать"
+                        android:textSize="16sp"
+                        android:paddingTop="16dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- Блок "Режим 6" -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/colorSettingCardView6"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Дневная смена"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <mr.demonid.workcalendar.views.StylePreviewCell
+                        android:id="@+id/colorPreview6"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Блок "Режим 7" -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/colorSettingCardView7"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ночная смена"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <mr.demonid.workcalendar.views.StylePreviewCell
+                        android:id="@+id/colorPreview7"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <!-- Кнопки сохранения и отмены -->
+    <Button
+        android:id="@+id/btn_color_save"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="Сохранить"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_color_cancel"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_color_cancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Отменить"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_color_save" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<androidx.constraintlayout.widget.ConstraintLayout-->
+<!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--xmlns:tools="http://schemas.android.com/tools"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="match_parent"-->
+<!--tools:context=".SettingsColorActivity">-->
+
+<!--&lt;!&ndash; Прокручиваемый контент &ndash;&gt;-->
+<!--<ScrollView-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="0dp"-->
+<!--    android:fillViewport="true"-->
+<!--    app:layout_constraintTop_toTopOf="parent"-->
+<!--    app:layout_constraintBottom_toTopOf="@id/btn_color_save">-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:padding="16dp">-->
+
+<!--        &lt;!&ndash; Блок "Режим 1" &ndash;&gt;-->
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/colorSettingCardView1"-->
+<!--            android:background="?attr/selectableItemBackgroundBorderless"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="16dp"-->
+<!--            app:cardCornerRadius="8dp"-->
+<!--            app:cardElevation="4dp">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:layout_marginBottom="8dp"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:padding="16dp">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Заголовок календаря"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <mr.demonid.workcalendar.views.TitlePreviewCell-->
+<!--                    android:id="@+id/colorPreview1"-->
+<!--                    android:layout_width="56dp"-->
+<!--                    android:layout_height="56dp" />-->
+
+<!--            </LinearLayout>-->
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--        &lt;!&ndash; Блок "Режим 2" &ndash;&gt;-->
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/colorSettingCardView2"-->
+<!--            android:background="?attr/selectableItemBackgroundBorderless"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="16dp"-->
+<!--            app:cardCornerRadius="8dp"-->
+<!--            app:cardElevation="4dp">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:layout_marginBottom="8dp"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:padding="16dp">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Названия дней недели"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <mr.demonid.workcalendar.views.StylePreviewCell-->
+<!--                    android:id="@+id/colorPreview2"-->
+<!--                    android:layout_width="56dp"-->
+<!--                    android:layout_height="56dp"/>-->
+<!--            </LinearLayout>-->
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--        &lt;!&ndash; Блок "Режим 3" &ndash;&gt;-->
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/colorSettingCardView3"-->
+<!--            android:background="?attr/selectableItemBackgroundBorderless"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="16dp"-->
+<!--            app:cardCornerRadius="8dp"-->
+<!--            app:cardElevation="4dp">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:layout_marginBottom="8dp"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:padding="16dp">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Ячейки календаря"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <mr.demonid.workcalendar.views.StylePreviewCell-->
+<!--                    android:id="@+id/colorPreview3"-->
+<!--                    android:layout_width="56dp"-->
+<!--                    android:layout_height="56dp"/>-->
+<!--            </LinearLayout>-->
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--        &lt;!&ndash; Блок "Режим 4" &ndash;&gt;-->
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/colorSettingCardView4"-->
+<!--            android:background="?attr/selectableItemBackgroundBorderless"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="16dp"-->
+<!--            app:cardCornerRadius="8dp"-->
+<!--            app:cardElevation="4dp">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:layout_marginBottom="8dp"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:padding="16dp">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Начало суточной смены"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <mr.demonid.workcalendar.views.StylePreviewCell-->
+<!--                    android:id="@+id/colorPreview4"-->
+<!--                    android:layout_width="56dp"-->
+<!--                    android:layout_height="56dp"/>-->
+<!--            </LinearLayout>-->
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--        &lt;!&ndash; Блок "Режим 5" &ndash;&gt;-->
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/colorSettingCardView5"-->
+<!--            android:background="?attr/selectableItemBackgroundBorderless"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="16dp"-->
+<!--            app:cardCornerRadius="8dp"-->
+<!--            app:cardElevation="4dp">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:layout_marginBottom="8dp"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:padding="16dp">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Дневная смена"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <mr.demonid.workcalendar.views.StylePreviewCell-->
+<!--                    android:id="@+id/colorPreview5"-->
+<!--                    android:layout_width="56dp"-->
+<!--                    android:layout_height="56dp"/>-->
+<!--            </LinearLayout>-->
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--        &lt;!&ndash; Блок "Режим 6" &ndash;&gt;-->
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/colorSettingCardView6"-->
+<!--            android:background="?attr/selectableItemBackgroundBorderless"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="16dp"-->
+<!--            app:cardCornerRadius="8dp"-->
+<!--            app:cardElevation="4dp">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:layout_marginBottom="8dp"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:padding="16dp">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Ночная смена"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <mr.demonid.workcalendar.views.StylePreviewCell-->
+<!--                    android:id="@+id/colorPreview6"-->
+<!--                    android:layout_width="56dp"-->
+<!--                    android:layout_height="56dp"/>-->
+<!--            </LinearLayout>-->
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--    </LinearLayout>-->
+<!--</ScrollView>-->
+
+
+<!--&lt;!&ndash; Кнопки сохранения и отмены &ndash;&gt;-->
+<!--<Button-->
+<!--    android:id="@+id/btn_color_save"-->
+<!--    android:layout_width="0dp"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_marginStart="8dp"-->
+<!--    android:layout_marginEnd="16dp"-->
+<!--    android:layout_marginBottom="8dp"-->
+<!--    android:text="Сохранить"-->
+<!--    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--    app:layout_constraintEnd_toStartOf="@+id/btn_color_cancel"-->
+<!--    app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--<Button-->
+<!--    android:id="@+id/btn_color_cancel"-->
+<!--    android:layout_width="0dp"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_marginStart="16dp"-->
+<!--    android:layout_marginEnd="8dp"-->
+<!--    android:layout_marginBottom="8dp"-->
+<!--    android:text="Отменить"-->
+<!--    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--    app:layout_constraintEnd_toEndOf="parent"-->
+<!--    app:layout_constraintStart_toEndOf="@+id/btn_color_save" />-->
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->

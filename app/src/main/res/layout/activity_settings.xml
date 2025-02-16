@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal"
+    tools:context=".SettingsActivity">
+
+    <!-- Верхние кнопки -->
+    <Button
+        android:id="@+id/btn_chart_names"
+        android:theme="@style/Theme.ColoredButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Управление графиками"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btn_chart_settings"
+        android:theme="@style/Theme.ColoredButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Настройка графиков"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btn_chart_colors_calendar"
+        android:theme="@style/Theme.ColoredButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Настройка цветов"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btn_chart_cell_type"
+        android:theme="@style/Theme.ColoredButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Настройка вида ячеек"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btn_chart_reset"
+        android:theme="@style/Theme.ColoredButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Сбросить настройки"
+        android:layout_marginBottom="16dp" />
+
+
+    <!-- Разделитель для отодвигания нижней кнопки вниз -->
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Кнопка возврата на главный экран -->
+    <Button
+        android:id="@+id/btn_back_to_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="На главный экран" />
+</LinearLayout>
