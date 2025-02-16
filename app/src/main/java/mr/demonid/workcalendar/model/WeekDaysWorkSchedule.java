@@ -11,8 +11,8 @@ import mr.demonid.workcalendar.types.WorkType;
 public class WeekDaysWorkSchedule extends AbstractWorkSchedule {
 
 
-    public WeekDaysWorkSchedule(UUID id, int firstDay) {
-        super(id, WorkType.WEEK_DAY_WEEK_NIGHT, firstDay, 14);
+    public WeekDaysWorkSchedule(UUID id, String name, int firstDay) {
+        super(id, name, WorkType.WEEK_DAY_WEEK_NIGHT, firstDay, 14);
     }
 
 

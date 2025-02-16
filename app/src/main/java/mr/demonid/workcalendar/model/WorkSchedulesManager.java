@@ -42,19 +42,19 @@ public class WorkSchedulesManager implements Iterable<WorkSchedule> {
         config.forEach(e -> {
             switch (e.getType()) {
                 case DAY_TWO_FREE:
-                    register(e.getId(), new OneInThreeWorkSchedule(e.getId(), config.getOffsetFirstDay(WorkType.DAY_TWO_FREE), config.isSecondDayEnable()));
+                    register(e.getId(), new OneInThreeWorkSchedule(e.getId(), e.getName(), config.getOffsetFirstDay(WorkType.DAY_TWO_FREE), config.isSecondDayEnable()));
                     break;
                 case DAY_THREE_FREE:
-                    register(e.getId(), new OneInFourWorkSchedule(e.getId(), config.getOffsetFirstDay(WorkType.DAY_THREE_FREE), config.isSecondDayEnable()));
+                    register(e.getId(), new OneInFourWorkSchedule(e.getId(), e.getName(), config.getOffsetFirstDay(WorkType.DAY_THREE_FREE), config.isSecondDayEnable()));
                     break;
                 case WEEK_DAY_WEEK_NIGHT:
-                    register(e.getId(), new WeekDaysWorkSchedule(e.getId(), config.getOffsetFirstDay(WorkType.WEEK_DAY_WEEK_NIGHT)));
+                    register(e.getId(), new WeekDaysWorkSchedule(e.getId(), e.getName(), config.getOffsetFirstDay(WorkType.WEEK_DAY_WEEK_NIGHT)));
                     break;
                 case TWO_DAY_TWO_NIGHT_TWO_FREE:
-                    register(e.getId(), new AllTwoDaysWorkSchedule(e.getId(), config.getOffsetFirstDay(WorkType.TWO_DAY_TWO_NIGHT_TWO_FREE)));
+                    register(e.getId(), new AllTwoDaysWorkSchedule(e.getId(), e.getName(), config.getOffsetFirstDay(WorkType.TWO_DAY_TWO_NIGHT_TWO_FREE)));
                     break;
                 case THREE_DAY_THREE_NIGHT_THREE_FREE:
-                    register(e.getId(), new AllThreeDaysWorkSchedule(e.getId(), config.getOffsetFirstDay(WorkType.THREE_DAY_THREE_NIGHT_THREE_FREE)));
+                    register(e.getId(), new AllThreeDaysWorkSchedule(e.getId(), e.getName(), config.getOffsetFirstDay(WorkType.THREE_DAY_THREE_NIGHT_THREE_FREE)));
             }
         });
     }

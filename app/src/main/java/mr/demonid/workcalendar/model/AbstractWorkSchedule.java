@@ -15,6 +15,7 @@ public abstract class AbstractWorkSchedule implements WorkSchedule {
 
     protected final UUID id;
     protected final WorkType type;
+    protected final String name;
     protected long totalFirstDay;           // первый день месяца, исчисляя от 1 января 1970
     protected long numDaysOfMonth;          // кол-во дней в месяце
     protected int startDay;                 // первый день смены - с 8 утра до 24 ночи (0 - 8)
@@ -24,8 +25,9 @@ public abstract class AbstractWorkSchedule implements WorkSchedule {
     protected final CalendarUtil calendar;
 
 
-    public AbstractWorkSchedule(UUID id, WorkType type, int firstDay, int cycleDays) {
+    public AbstractWorkSchedule(UUID id, String name, WorkType type, int firstDay, int cycleDays) {
         this.id = id;
+        this.name = name;
         this.type = type;
         this.cycleDays = cycleDays;
         calendar = CalendarUtil.getInstance();
@@ -37,6 +39,12 @@ public abstract class AbstractWorkSchedule implements WorkSchedule {
     @Override
     public UUID getId() {
         return id;
+    }
+
+
+    @Override
+    public String getName() {
+        return name;
     }
 
     @Override

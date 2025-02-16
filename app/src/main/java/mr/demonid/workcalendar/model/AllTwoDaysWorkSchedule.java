@@ -14,8 +14,8 @@ public class AllTwoDaysWorkSchedule extends AbstractWorkSchedule {
      * Конструктор графика дежурств.
      * @param firstDay Первый день смены (от 0 до 8).
      */
-    public AllTwoDaysWorkSchedule(UUID id, int firstDay) {
-        super(id, WorkType.TWO_DAY_TWO_NIGHT_TWO_FREE, firstDay, 6);
+    public AllTwoDaysWorkSchedule(UUID id, String name, int firstDay) {
+        super(id, name, WorkType.TWO_DAY_TWO_NIGHT_TWO_FREE, firstDay, 6);
     }
 
     @Override

@@ -11,6 +11,7 @@ import mr.demonid.workcalendar.types.WorkType;
  */
 public interface WorkSchedule {
     UUID getId();
+    String getName();                   // возвращает пользовательское имя графика
     WorkType getType();                 // возвращает тип графика
     void refresh();                     // пересчет данных по текущему месяцу
     DayType getDayType(int day);        // возвращает тип ячейки для указанного для

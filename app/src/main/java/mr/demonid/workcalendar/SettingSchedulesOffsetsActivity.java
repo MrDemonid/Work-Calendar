@@ -48,7 +48,7 @@ public class SettingSchedulesOffsetsActivity extends AppCompatActivity {
         if (currentSchedule != null) {
             initCalendar(currentSchedule, config.getDayStyle());
             ((TextView) findViewById(R.id.titleCalendarTheme)).setText(calendarTable.getHeader());
-            ((TextView) findViewById(R.id.textCurrentTheme)).setText(currentSchedule.getType().getDescription());
+            ((TextView) findViewById(R.id.textCurrentTheme)).setText(currentSchedule.getName());
 
             initButtonsSwitchThemes();
             initButtonsAction();
@@ -100,12 +100,12 @@ public class SettingSchedulesOffsetsActivity extends AppCompatActivity {
         btnPrev.setOnClickListener(v -> {
             calendarTable.changeWorkTheme(workSchedulesManager.prev());
             TextView themeName = findViewById(R.id.textCurrentTheme);
-            themeName.setText(workSchedulesManager.getCurrentWorkSchedule().getType().getDescription());
+            themeName.setText(workSchedulesManager.getCurrentWorkSchedule().getName());
         });
         btnNext.setOnClickListener(v -> {
             calendarTable.changeWorkTheme(workSchedulesManager.next());
             TextView themeName = findViewById(R.id.textCurrentTheme);
-            themeName.setText(workSchedulesManager.getCurrentWorkSchedule().getType().getDescription());
+            themeName.setText(workSchedulesManager.getCurrentWorkSchedule().getName());
         });
     }
 

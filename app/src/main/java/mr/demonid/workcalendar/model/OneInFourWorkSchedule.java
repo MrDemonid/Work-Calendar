@@ -14,8 +14,8 @@ public class OneInFourWorkSchedule extends AbstractWorkSchedule {
      * Конструктор графика дежурств.
      * @param firstDay Первый день смены (от 0 до 3).
      */
-    public OneInFourWorkSchedule(UUID id, int firstDay, boolean isShowSecond) {
-        super(id, WorkType.DAY_THREE_FREE, firstDay, 4);
+    public OneInFourWorkSchedule(UUID id, String name, int firstDay, boolean isShowSecond) {
+        super(id, name, WorkType.DAY_THREE_FREE, firstDay, 4);
         isSecondDayEnable = isShowSecond;
     }
 
