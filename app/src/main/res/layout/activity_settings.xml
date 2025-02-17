@@ -27,7 +27,7 @@
                 android:id="@+id/btn_chart_names"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
+                android:layout_margin="12dp"
                 android:text="Управление графиками"
                 android:theme="@style/Theme.ColoredButton" />
 
@@ -35,7 +35,7 @@
                 android:id="@+id/btn_chart_settings"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
+                android:layout_margin="12dp"
                 android:text="Настройка графиков"
                 android:theme="@style/Theme.ColoredButton" />
 
@@ -43,7 +43,7 @@
                 android:id="@+id/btn_chart_colors_calendar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
+                android:layout_margin="12dp"
                 android:text="Настройка цветов"
                 android:theme="@style/Theme.ColoredButton" />
 
@@ -51,7 +51,7 @@
                 android:id="@+id/btn_chart_cell_type"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
+                android:layout_margin="12dp"
                 android:text="Настройка вида ячеек"
                 android:theme="@style/Theme.ColoredButton" />
 
@@ -60,7 +60,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="64dp"
-                android:layout_marginBottom="16dp"
                 android:text="Сбросить настройки"
                 android:theme="@style/Theme.ColoredButton" />
 
