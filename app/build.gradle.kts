@@ -8,10 +8,10 @@ android {
 
     defaultConfig {
         applicationId = "mr.demonid.workcalendar"
-        minSdk = 24
+        minSdk = 24             // Android 7.0
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2         // должен увеличиваться при каждом обновлении (для различных xxStore)
+        versionName = "1.0.1"   // это версия для показа пользователю
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
